@@ -10,7 +10,15 @@ a:hover,
 a:visited {
   text-decoration: none;
 }
-
+@supports (-webkit-overflow-scrolling: touch) {
+  .nav-bar-main {
+    position: fixed;
+  }
+  
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
 .full-bleed {
   top: 0px;
   box-shadow: 0 0 0 100vmax rgba(23, 23, 26, 0.5);
@@ -132,7 +140,7 @@ p {
 .nav-bar-main {
   width: 100%;
   max-width: 100%;
-  max-height: 1.25rem;
+  max-height: 3rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -194,4 +202,21 @@ p {
 .contact-info p {
   margin-right: 1rem;
   text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .nav-bar-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: none;
+    margin-top: 0;
+    padding: 10px 0;
+  }
+  
+  .nav-bar-item {
+    display: block;
+    padding: 10px 0;
+  }
 }
