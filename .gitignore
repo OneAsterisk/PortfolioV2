@@ -1,1 +1,2 @@
 *.env
+public/firebase-debug.log
