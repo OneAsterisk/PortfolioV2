@@ -5,45 +5,58 @@
     "Trebuchet MS", sans-serif;
   src: url(".\fonts\coolvetica rg.otf");
 }
-a,
-a:hover,
+a {
+  color: #E0E1DD;
+}
+a:hover {
+  text-decoration: none;
+  color: #778DA9;
+}
 a:visited {
   text-decoration: none;
+}
+a:focus {
+  border: 1px solid #0D1B2A;
+  border-radius: 0.5px;
 }
 @supports (-webkit-overflow-scrolling: touch) {
   .nav-bar-main {
     position: fixed;
   }
-  
+
   body {
     -webkit-overflow-scrolling: touch;
   }
 }
 .full-bleed {
   top: 0px;
-  box-shadow: 0 0 0 100vmax rgba(23, 23, 26, 0.5);
+  box-shadow: 0 0 0 100vmax rgba(13, 27, 42, 0.5);
   clip-path: inset(0 -100vmax);
 }
 #navbar.full-bleed {
   top: 0px;
-  box-shadow: 0 0 0 100vmax rgba(23, 23, 26, 1);
+  box-shadow: 0 0 0 100vmax rgba(13, 27, 42, 1);
   clip-path: inset(0 -100vmax);
 }
 .main-body {
   text-align: center;
-  color: aliceblue;
-  background-color: #282831;
+  color: #E0E1DD;
+  background-color: #1B263B;
 }
 .title-container {
   width: 100%;
   top: -10px;
   position: relative;
   display: flex;
-  background-color: rgba(23, 23, 26, 0.5);
+  background-color: rgba(13, 27, 42, 0.5);
   align-items: center;
   justify-content: center;
   justify-items: left;
   align-items: center;
+  display: flex;
+}
+.activities-list {
+  justify-content: left;
 }
 .main-header {
   justify-content: flex-start;
@@ -53,7 +66,7 @@ a:visited {
   max-width: 80rem;
   align-items: center;
   flex-direction: column;
-  background: #1f1f25;
+  /* background: rgba(13, 27, 42, 1); */
   text-align: left;
   margin-bottom: 0px;
   margin-top: 0px;
@@ -81,10 +94,13 @@ p {
 .contact-info-form {
   display: flex;
   box-sizing: border-box;
-  border: black outset 1px;
+  border: #0D1B2A outset 1px;
   border-radius: 1rem;
   max-width: 34.875rem;
 }
+/*
+  Project Container Stuff and Things
+*/
 .project-container {
   margin-top: 2rem;
   box-sizing: border-box;
@@ -97,21 +113,20 @@ p {
   align-items: center;
   overflow: hidden;
   width: 21rem;
-  min-height: 25rem;
+  min-height: 30rem;
   max-height: fit-content;
   border-radius: 8px;
-  border-color: #000000;
+  border-color: #0D1B2A;
   border-width: 3px;
   border-style: outset;
   display: flex;
   flex-direction: column;
-  color: #ffffff;
+  color: #E0E1DD;
   overflow-wrap: normal;
 }
 .project-preview img {
   position: relative;
   margin-top: 5rem;
-  border: #ffffff 0.5px solid;
 }
 
 .project-preview p {
@@ -120,20 +135,27 @@ p {
   margin-top: 15rem;
   max-width: 19rem;
 }
+.project-container a {
+  text-decoration: none;
+}
+.project-container a:hover {
+  text-decoration: underline;
+}
+
 .bigletters {
   text-transform: uppercase;
 }
 .MTU {
-  color: #faea07;
+  color: #778DA9;
   text-decoration: solid;
 }
 .nav-bar {
   display: flex;
   flex-direction: row;
-  background-color: #282831;
+  background-color: #1B263B;
   max-width: 84rem;
   margin: auto 0.625rem;
-  border-color: white;
+  border-color: #E0E1DD;
   border-style: solid;
 }
 
@@ -146,12 +168,12 @@ p {
   z-index: 999;
   margin-top: -10px;
   flex: 50%;
-  background-color: rgba(23, 23, 26, 1);
+  background-color: rgba(13, 27, 42, 1);
 }
 
 .nav-bar-item {
   font-family: Arial;
-  color: #f3f3f3;
+  color: #E0E1DD;
   text-align: center;
   padding: 0.3125rem 0.625rem;
   text-decoration: none;
@@ -169,9 +191,11 @@ p {
 .section-header {
   text-transform: uppercase;
 }
-.nav-bar-item:hover {
-  background-color: #30303a;
-  color: #000000;
+.nav-bar-item:hover,
+.nav-bar-item:focus {
+  background-color: #1B263B;
+  color: #0D1B2A;
+  border: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -188,16 +212,16 @@ p {
   padding-left: 1rem;
 }
 .contact-info a {
-  color: rgb(255, 255, 255);
+  color: #E0E1DD;
   text-decoration: underline;
   font-weight: bold;
 }
 .contact-info a:hover {
-  color: #5582ff;
+  color: #415A77;
 }
 
 .contact-info a:visited {
-  color: rgb(255, 255, 255);
+  color: #E0E1DD;
 }
 .contact-info p {
   margin-right: 1rem;
@@ -214,9 +238,14 @@ p {
     margin-top: 0;
     padding: 10px 0;
   }
-  
+
   .nav-bar-item {
     display: block;
     padding: 10px 0;
   }
+}
+hr {
+  width: 100vw;
+  margin-left: calc(-25vw + 25%);
+  margin-right: calc(-25vw + 25%);
 }
