@@ -1,37 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="shortcut icon" href=".\images\favicon.ico" type="image/x-icon" />
-    <title>Resume</title>
-</head>
-<body id="main-body" class="main-body">
-    <div class="title-container full-bleed" style="display: flex">
-      <img src=".\images\MainLogo.png" alt="OneAsterisk Logo" />
-      <div id="title-of-page" class="main-header">
-        <h1>Resume</h1>
-      </div>
-    </div>
-    <div id="navbar" class="nav-bar-main left-justified full-bleed">
-      <a class="nav-bar-item righ-justified" href="./index.html"
-        ><b class="bigletters">Home</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./projects.html"
-        ><b class="bigletters">Projects</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./index.html#contact"
-        ><b class="bigletters">Contact</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./index.html#title-of-page"
-        ><b class="bigletters">About</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./resume_page.html"
-      ><b class="bigletters">Resume</b></a
-    >
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ben Papp's resume - Full-stack developer with experience in React, TypeScript, and modern web technologies."
+    />
+    <meta
+      name="keywords"
+      content="Ben Papp, Resume, Full-stack Developer, React, TypeScript, JavaScript, Web Developer"
+    />
+    <meta name="author" content="Ben Papp" />
 
-    <iframe src="./files/Resume.pdf" width="100%" height="1000px"></iframe>
-</body>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://benpapp.com/resume_page.html" />
+    <meta property="og:title" content="Ben Papp - Resume" />
+    <meta
+      property="og:description"
+      content="Full-stack developer resume showcasing experience in React, TypeScript, and modern web technologies."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Ben Papp - Resume" />
+    <meta
+      property="twitter:description"
+      content="Full-stack developer resume showcasing experience in React, TypeScript, and modern web technologies."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                900: "#0c4a6e",
+              },
+              dark: {
+                50: "#E0E1DD",
+                100: "#778DA9",
+                800: "#1B263B",
+                900: "#0D1B2A",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Ben Papp - Resume</title>
+  </head>
+  <body class="bg-dark-800 text-dark-50 font-sans antialiased">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-dark-900 to-dark-800 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex items-center justify-center space-x-6">
+          <img
+            src="./images/MainLogo.png"
+            alt="Ben Papp Logo"
+            class="w-16 h-16 rounded-full shadow-md"
+          />
+          <div class="text-center">
+            <h1 class="text-4xl font-bold text-white mb-2">Resume</h1>
+            <p class="text-lg text-dark-100">
+              My professional experience and skills
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-100/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center">
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="./index.html"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              HOME
+            </a>
+            <a
+              href="./projects.html"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              PROJECTS
+            </a>
+            <a
+              href="./index.html#contact"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              CONTACT
+            </a>
+            <a
+              href="./index.html#about"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              ABOUT
+            </a>
+            <a
+              href="./resume_page.html"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-primary-500"
+            >
+              RESUME
+            </a>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div class="md:hidden flex items-center justify-between w-full py-2">
+            <span class="text-white font-semibold">Ben Papp</span>
+            <button
+              id="mobile-menu-button"
+              class="text-dark-50 hover:text-primary-500 p-2"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden border-t border-dark-100/10"
+        >
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="./index.html"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >HOME</a
+            >
+            <a
+              href="./projects.html"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >PROJECTS</a
+            >
+            <a
+              href="./index.html#contact"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >CONTACT</a
+            >
+            <a
+              href="./index.html#about"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >ABOUT</a
+            >
+            <a
+              href="./resume_page.html"
+              class="block px-3 py-2 text-base font-medium text-primary-500 bg-dark-800 rounded-md"
+              >RESUME</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Resume Actions -->
+      <div class="text-center mb-8">
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <a
+            href="./files/Resume.pdf"
+            download
+            class="inline-flex items-center px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path>
+            </svg>
+            Download Resume
+          </a>
+          <a
+            href="./index.html#contact"
+            class="inline-flex items-center px-6 py-3 bg-dark-900 hover:bg-dark-700 text-white font-medium rounded-lg transition-colors duration-200 border border-dark-100/20"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Resume Viewer -->
+      <div
+        class="bg-dark-900/50 backdrop-blur-sm rounded-xl border border-dark-100/10 shadow-xl overflow-hidden"
+      >
+        <div class="p-4 border-b border-dark-100/10 bg-dark-900/30">
+          <h2 class="text-lg font-semibold text-white">Resume Preview</h2>
+          <p class="text-dark-100 text-sm">
+            View my complete professional experience and qualifications
+          </p>
+        </div>
+
+        <!-- PDF Viewer -->
+        <div class="relative">
+          <iframe
+            src="./files/Resume.pdf"
+            class="w-full h-screen border-0"
+            title="Ben Papp Resume"
+            loading="lazy"
+          >
+            <div class="flex items-center justify-center h-96 bg-dark-800">
+              <div class="text-center">
+                <svg
+                  class="w-16 h-16 text-dark-100 mx-auto mb-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+                <p class="text-dark-100 mb-4">
+                  Your browser doesn't support PDF viewing.
+                </p>
+                <a
+                  href="./files/Resume.pdf"
+                  class="inline-flex items-center px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200"
+                >
+                  <svg
+                    class="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    ></path>
+                  </svg>
+                  Download PDF
+                </a>
+              </div>
+            </div>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Back to Home -->
+      <div class="text-center mt-8">
+        <a
+          href="./index.html"
+          class="inline-flex items-center px-6 py-3 bg-dark-900 hover:bg-dark-700 text-white font-medium rounded-lg transition-colors duration-200 border border-dark-100/20"
+        >
+          <svg
+            class="mr-2 w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            ></path>
+          </svg>
+          Back to Home
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-dark-100/10 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-dark-100">
+          © 2024 Benjamin Papp. Built with HTML, CSS, and Tailwind CSS.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+    </script>
+  </body>
 </html>

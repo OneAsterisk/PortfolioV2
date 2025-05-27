@@ -1,117 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ben Papp's personal portfolio for Computer Science projects and experience."
+      content="Ben Papp - Full-stack developer specializing in modern web technologies. Computer Science graduate with experience in React, TypeScript, and cloud deployment."
     />
-    <meta charset="UTF-8" />
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="shortcut icon" href=".\images\favicon.ico" type="image/x-icon" />
-    <title>Ben's Portfolio</title>
-  </head>
-  <body id="main-body" class="main-body">
-    <header class="title-container full-bleed">
-      <img src=".\images\MainLogo.png" alt="OneAsterisk Logo" />
-      <div id="title-of-page" class="main-header">
-        <h1>Benjamin Papp</h1>
-        <p>4th Year Computer Science Major<br />Cyber Security Minor</p>
-      </div>
-    </header>
-    <nav id="navbar" class="nav-bar-main left-justified full-bleed">
-      <a class="nav-bar-item right-justified" href="./index.html"
-        ><b class="bigletters">Home</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./projects.html"
-        ><b class="bigletters">Projects</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./index.html#contact"
-        ><b class="bigletters">Contact</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./index.html#title-of-page"
-        ><b class="bigletters">About me</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./resume_page.html"
-        ><b class="bigletters">Resume</b></a
-      >
-    </nav>
-    <main class="main">
-      <h2 class="section-header" id="about">Hi, I'm Ben...</h2>
-      <p class="desc-text">
-        I am a 4th year Computer Science major at
-        <span class="MTU"><b class="bigletters">Michigan Tech</b></span
-        >. I am a dedicated worker who strives towards excellence and am a fast
-        learner when it comes to new technologies. I am currently looking for a
-        full-time opportunity. I am open to most areas in software development
-        but am most looking for Web Development areas. I will be graduating in
-        April 2025. My interests include game development, web development, and
-        competitive powerlifting.
-      </p>
-      <h2 class="section-header" id="highlighted-projects">
-        recent projects/endeavours
-      </h2>
-      <article class="project-container">
-        <a href="./projects.html#BlizzardsClimb">
-          <section class="project-preview">
-            <img
-              src=".\images/Logo.svg"
-              alt="Collegiate Strength logo, a barbell where the text makes up the 
-              bar and there are 5 red plates and 1 yellow per side"
-              style="
-                position: absolute;
-                height: auto;
-                width: auto;
-                max-width: 12.5rem;
-                max-height: 12.5rem;
-              "
-            />
-            <h2>Collegiate Strength</h2>
-            <p>
-              Collegiate Strength, is a powerlifting leaderboard web app geared towards
-              collegiate powerlifters. It is a full stack web app using Svelte, Vercel, and Firestore.
-            </p>
-          </section>
-        </a>
-        <a href="./projects.html#Gentex">
-          <section class="project-preview">
-            <img
-              src=".\images\gentex-logo.svg"
-              alt="Gentex Corporation Logo"
-              style="
-                position: absolute;
-                height: auto;
-                width: auto;
-                max-width: 12.5rem;
-                max-height: 12.5rem;
-              "
-            />
-            <h2>Internship With Gentex</h2>
-            <p>
-              Worked on a web app within the company. Used React, Material UI,
-              and GraphQL. Worked on optimizations and importing large amounts
-              of data.
-            </p>
-          </section>
-        </a>
-      </article>
+    <meta
+      name="keywords"
+      content="Ben Papp, Full-stack Developer, React, TypeScript, JavaScript, Web Developer, Computer Science"
+    />
+    <meta name="author" content="Ben Papp" />
 
-      <h2 class="section-header" id="contact">Wanna get in touch with me?</h2>
-      <footer class="contact-info-form">
-        <div class="contact-my-info">
-          <div class="contact-info">
-            <p>
-              If you want to get in touch with me if you're looking for a
-              developer, have feedback, or just wanna chat, you can email me:
-              <a href="mailto:contact@benpapp.com?subject=Contact Form">
-                contact@benpapp.com</a
-              >.<br />
-              Click <a href="./resume_page.html">here</a> for my resume or the
-              link at the top.
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://benpapp.com/" />
+    <meta property="og:title" content="Ben Papp - Full-stack Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack developer specializing in modern web technologies with experience in React, TypeScript, and cloud deployment."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Ben Papp - Full-stack Developer" />
+    <meta
+      property="twitter:description"
+      content="Full-stack developer specializing in modern web technologies with experience in React, TypeScript, and cloud deployment."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                900: "#0c4a6e",
+              },
+              dark: {
+                50: "#E0E1DD",
+                100: "#778DA9",
+                800: "#1B263B",
+                900: "#0D1B2A",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Heroicons -->
+    <script
+      src="https://unpkg.com/heroicons@2.0.18/24/outline/index.js"
+      type="module"
+    ></script>
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Ben Papp - Full-stack Developer</title>
+  </head>
+  <body class="bg-dark-800 text-dark-50 font-sans antialiased">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-dark-900 to-dark-800 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex items-center justify-center space-x-6">
+          <img
+            src="./images/MainLogo.png"
+            alt="Ben Papp Logo"
+            class="w-16 h-16 rounded-full shadow-md"
+          />
+          <div class="text-center">
+            <h1 class="text-4xl font-bold text-white mb-2">Benjamin Papp</h1>
+            <p class="text-lg text-dark-100">
+              Full-stack Developer<br />Computer Science Graduate
             </p>
           </div>
         </div>
-      </footer>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-100/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center">
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="./index.html"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-primary-500"
+            >
+              HOME
+            </a>
+            <a
+              href="./projects.html"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              PROJECTS
+            </a>
+            <a
+              href="#contact"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              CONTACT
+            </a>
+            <a
+              href="#about"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              ABOUT
+            </a>
+            <a
+              href="./resume_page.html"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              RESUME
+            </a>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div class="md:hidden flex items-center justify-between w-full py-2">
+            <span class="text-white font-semibold">Ben Papp</span>
+            <button
+              id="mobile-menu-button"
+              class="text-dark-50 hover:text-primary-500 p-2"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden border-t border-dark-100/10"
+        >
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="./index.html"
+              class="block px-3 py-2 text-base font-medium text-primary-500 bg-dark-800 rounded-md"
+              >HOME</a
+            >
+            <a
+              href="./projects.html"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >PROJECTS</a
+            >
+            <a
+              href="#contact"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >CONTACT</a
+            >
+            <a
+              href="#about"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >ABOUT</a
+            >
+            <a
+              href="./resume_page.html"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >RESUME</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- About Section -->
+      <section id="about" class="mb-16">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">Hi, I'm Ben</h2>
+          <div class="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+        </div>
+
+        <div
+          class="bg-dark-900/50 backdrop-blur-sm rounded-xl p-8 border border-dark-100/10 shadow-xl"
+        >
+          <p
+            class="text-lg text-dark-50 leading-relaxed text-center max-w-4xl mx-auto"
+          >
+            I am a Computer Science graduate from
+            <span class="text-primary-500 font-semibold">Michigan Tech</span>
+            specializing in modern web technologies. I'm a dedicated developer
+            who strives for excellence and quickly adapts to new technologies.
+            Currently seeking full-time opportunities in
+            <span class="text-primary-500 font-semibold">web development</span>,
+            with experience in React, TypeScript, and full-stack development. My
+            interests include game development, web applications, and
+            competitive powerlifting.
+          </p>
+
+          <!-- Skills Pills -->
+          <div class="flex flex-wrap justify-center gap-3 mt-8">
+            <span
+              class="px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-medium"
+              >React</span
+            >
+            <span
+              class="px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-medium"
+              >TypeScript</span
+            >
+            <span
+              class="px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-medium"
+              >JavaScript</span
+            >
+            <span
+              class="px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-medium"
+              >Node.js</span
+            >
+            <span
+              class="px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-medium"
+              >Svelte</span
+            >
+            <span
+              class="px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-medium"
+              >GraphQL</span
+            >
+            <span
+              class="px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-medium"
+              >Firebase</span
+            >
+            <span
+              class="px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-medium"
+              >Unity</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Featured Projects Section -->
+      <section id="projects" class="mb-16">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">Featured Projects</h2>
+          <div class="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+          <p class="text-dark-100 text-lg max-w-2xl mx-auto">
+            Here are some of my recent projects showcasing my skills in web
+            development and software engineering.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Collegiate Strength Project -->
+          <a href="./projects.html#BlizzardsClimb" class="group block">
+            <div
+              class="bg-dark-900/50 backdrop-blur-sm rounded-xl p-6 border border-dark-100/10 shadow-xl hover:shadow-2xl hover:border-primary-500/30 transition-all duration-300 h-full"
+            >
+              <div class="flex items-center justify-center mb-6 h-32">
+                <img
+                  src="./images/Logo.svg"
+                  alt="Collegiate Strength logo"
+                  class="max-w-24 max-h-24 object-contain group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3
+                class="text-xl font-semibold text-white mb-3 group-hover:text-primary-500 transition-colors"
+              >
+                Collegiate Strength
+              </h3>
+              <p class="text-dark-50 leading-relaxed mb-4">
+                A powerlifting leaderboard web app designed for collegiate
+                powerlifters. Full-stack application built with modern
+                technologies.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >Svelte</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >Vercel</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >Firestore</span
+                >
+              </div>
+            </div>
+          </a>
+
+          <!-- Gentex Internship Project -->
+          <a href="./projects.html#Gentex" class="group block">
+            <div
+              class="bg-dark-900/50 backdrop-blur-sm rounded-xl p-6 border border-dark-100/10 shadow-xl hover:shadow-2xl hover:border-primary-500/30 transition-all duration-300 h-full"
+            >
+              <div class="flex items-center justify-center mb-6 h-32">
+                <img
+                  src="./images/gentex-logo.svg"
+                  alt="Gentex Corporation Logo"
+                  class="max-w-24 max-h-24 object-contain group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3
+                class="text-xl font-semibold text-white mb-3 group-hover:text-primary-500 transition-colors"
+              >
+                Gentex Internship
+              </h3>
+              <p class="text-dark-50 leading-relaxed mb-4">
+                Full-stack development internship working on enterprise web
+                applications. Focused on performance optimization and data
+                management.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >GraphQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >Material UI</span
+                >
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- View All Projects Button -->
+        <div class="text-center mt-8">
+          <a
+            href="./projects.html"
+            class="inline-flex items-center px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200"
+          >
+            View All Projects
+            <svg
+              class="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="mb-16">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">Let's Connect</h2>
+          <div class="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+          <p class="text-dark-100 text-lg max-w-2xl mx-auto">
+            I'm always open to discussing new opportunities, collaborations, or
+            just having a chat about technology.
+          </p>
+        </div>
+
+        <div
+          class="bg-dark-900/50 backdrop-blur-sm rounded-xl p-8 border border-dark-100/10 shadow-xl max-w-2xl mx-auto"
+        >
+          <div class="text-center">
+            <div class="mb-6">
+              <svg
+                class="w-12 h-12 text-primary-500 mx-auto mb-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Get In Touch
+              </h3>
+              <p class="text-dark-50 mb-6">
+                Whether you're looking for a developer, have feedback, or just
+                want to chat about tech, I'd love to hear from you.
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <a
+                href="mailto:contact@benpapp.com?subject=Contact%20from%20Portfolio"
+                class="inline-flex items-center px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200 w-full justify-center"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                contact@benpapp.com
+              </a>
+
+              <a
+                href="./resume_page.html"
+                class="inline-flex items-center px-6 py-3 bg-dark-800 hover:bg-dark-700 text-white font-medium rounded-lg transition-colors duration-200 w-full justify-center border border-dark-100/20"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+                View Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-dark-100/10 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-dark-100">
+          © 2024 Benjamin Papp. Built with HTML, CSS, and Tailwind CSS.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add active state to navigation
+      const navLinks = document.querySelectorAll("nav a[href^='#']");
+      const sections = document.querySelectorAll("section[id]");
+
+      function updateActiveNav() {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 200) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove(
+            "border-primary-500",
+            "text-primary-500",
+            "bg-dark-800"
+          );
+          link.classList.add("border-transparent");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("border-primary-500");
+            link.classList.remove("border-transparent");
+            // For mobile menu
+            if (link.classList.contains("block")) {
+              link.classList.add("text-primary-500", "bg-dark-800");
+            }
+          }
+        });
+      }
+
+      window.addEventListener("scroll", updateActiveNav);
+    </script>
   </body>
 </html>

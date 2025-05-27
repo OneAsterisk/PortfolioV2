@@ -1,114 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ben Papp's personal projects for game development and other subjects."
+      content="Ben Papp's projects - Full-stack developer showcasing web development, game development, and software engineering projects."
     />
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="shortcut icon" href=".\images\favicon.ico" type="image/x-icon" />
-    <title>Ben's Projects</title>
+    <meta
+      name="keywords"
+      content="Ben Papp, Projects, React, TypeScript, JavaScript, Unity, Game Development, Web Developer"
+    />
+    <meta name="author" content="Ben Papp" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://benpapp.com/projects.html" />
+    <meta property="og:title" content="Ben Papp - Projects" />
+    <meta
+      property="og:description"
+      content="Showcasing my projects in web development, game development, and software engineering."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Ben Papp - Projects" />
+    <meta
+      property="twitter:description"
+      content="Showcasing my projects in web development, game development, and software engineering."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                900: "#0c4a6e",
+              },
+              dark: {
+                50: "#E0E1DD",
+                100: "#778DA9",
+                800: "#1B263B",
+                900: "#0D1B2A",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Ben Papp - Projects</title>
   </head>
-  <body id="main-body" class="main-body">
-    <header class="title-container full-bleed" style="display: flex">
-      <img src=".\images\MainLogo.png" alt="OneAsterisk Logo" />
-      <div id="title-of-page" class="main-header">
-        <h1>Personal Projects</h1>
+  <body class="bg-dark-800 text-dark-50 font-sans antialiased">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-dark-900 to-dark-800 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex items-center justify-center space-x-6">
+          <img
+            src="./images/MainLogo.png"
+            alt="Ben Papp Logo"
+            class="w-16 h-16 rounded-full shadow-md"
+          />
+          <div class="text-center">
+            <h1 class="text-4xl font-bold text-white mb-2">My Projects</h1>
+            <p class="text-lg text-dark-100">
+              Showcasing my development journey
+            </p>
+          </div>
+        </div>
       </div>
     </header>
-    <nav id="navbar" class="nav-bar-main left-justified full-bleed">
-      <a class="nav-bar-item righ-justified" href="./index.html"
-        ><b class="bigletters">Home</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./projects.html"
-        ><b class="bigletters">Projects</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./index.html#contact"
-        ><b class="bigletters">Contact</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./index.html#title-of-page"
-        ><b class="bigletters">About me</b></a
-      >
-      <a class="nav-bar-item righ-justified" href="./resume_page.html"
-        ><b class="bigletters">Resume</b></a
-      >
+
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-100/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center">
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="./index.html"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              HOME
+            </a>
+            <a
+              href="./projects.html"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-primary-500"
+            >
+              PROJECTS
+            </a>
+            <a
+              href="./index.html#contact"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              CONTACT
+            </a>
+            <a
+              href="./index.html#about"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              ABOUT
+            </a>
+            <a
+              href="./resume_page.html"
+              class="px-4 py-4 text-sm font-medium text-dark-50 hover:text-primary-500 transition-colors duration-200 border-b-2 border-transparent hover:border-primary-500"
+            >
+              RESUME
+            </a>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div class="md:hidden flex items-center justify-between w-full py-2">
+            <span class="text-white font-semibold">Ben Papp</span>
+            <button
+              id="mobile-menu-button"
+              class="text-dark-50 hover:text-primary-500 p-2"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden border-t border-dark-100/10"
+        >
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="./index.html"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >HOME</a
+            >
+            <a
+              href="./projects.html"
+              class="block px-3 py-2 text-base font-medium text-primary-500 bg-dark-800 rounded-md"
+              >PROJECTS</a
+            >
+            <a
+              href="./index.html#contact"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >CONTACT</a
+            >
+            <a
+              href="./index.html#about"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >ABOUT</a
+            >
+            <a
+              href="./resume_page.html"
+              class="block px-3 py-2 text-base font-medium text-dark-50 hover:text-primary-500 hover:bg-dark-800 rounded-md transition-colors"
+              >RESUME</a
+            >
+          </div>
+        </div>
+      </div>
     </nav>
-    <main class="main">
-      <article class="project-container">
-        <section class="project-preview" id="GamblersDescent">
-          <img
-            src=".\images\Gambler'sDescentStartScreen.png"
-            alt="Start screen of The Gambler's Descent, featuring a play, options, and quit button"
-            style="
-              position: absolute;
-              height: auto;
-              width: auto;
-              max-width: 12.5rem;
-              max-height: 12.5rem;
-            "
-          />
-          <h2>The Gambler's Descent</h2>
-          <p>
-            Following my passion of Game Development, me and a group of friends worked together in a class where we were tasked on making a software project togehter of our choosing. For this we chose to work on a roguelite dungeon crawler. We used Unity along with C# to program the game. My role was mainly focused on movement, attacks, and enemy development.
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Projects Grid -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- The Gambler's Descent -->
+        <div
+          id="GamblersDescent"
+          class="bg-dark-900/50 backdrop-blur-sm rounded-xl p-6 border border-dark-100/10 shadow-xl"
+        >
+          <div class="flex items-center justify-center mb-6 h-48">
+            <img
+              src="./images/Gambler'sDescentStartScreen.png"
+              alt="Start screen of The Gambler's Descent"
+              class="max-w-full max-h-full object-contain rounded-lg"
+            />
+          </div>
+          <h2 class="text-2xl font-semibold text-white mb-3">
+            The Gambler's Descent
+          </h2>
+          <p class="text-dark-50 leading-relaxed mb-4">
+            Following my passion for game development, my team and I created a
+            roguelite dungeon crawler as our capstone project. Built with Unity
+            and C#, I focused on movement mechanics, combat systems, and enemy
+            AI development.
           </p>
-        </section>
-        <section class="project-preview" id="PersonalPortfolio">
-          <img
-            src="./images/PersonalPortfolio.png"
-            alt="Screenshot of main page of Ben's personal portfolio"
-            style="
-              position: absolute;
-              height: auto;
-              width: auto;
-              max-width: 12.5rem;
-              max-height: 12.5rem;
-            "
-          />
-          <h2>Personal Portfolio</h2>
-          <p>
-            I created this personal project as a way for me to further my
-            knowledge of HTML and CSS and create an understanding of web hosting
-            using Google Firebase and Google Cloud. I am hoping to eventually revamp this to be cooler and more optimized. 
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Unity</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >C#</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Game Development</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Team Project</span
+            >
+          </div>
+        </div>
+
+        <!-- Personal Portfolio -->
+        <div
+          id="PersonalPortfolio"
+          class="bg-dark-900/50 backdrop-blur-sm rounded-xl p-6 border border-dark-100/10 shadow-xl"
+        >
+          <div class="flex items-center justify-center mb-6 h-48">
+            <img
+              src="./images/PersonalPortfolio.png"
+              alt="Screenshot of Ben's personal portfolio"
+              class="max-w-full max-h-full object-contain rounded-lg"
+            />
+          </div>
+          <h2 class="text-2xl font-semibold text-white mb-3">
+            Personal Portfolio
+          </h2>
+          <p class="text-dark-50 leading-relaxed mb-4">
+            This portfolio website showcases my journey in web development.
+            Originally built with vanilla HTML and CSS, recently modernized with
+            Tailwind CSS for a more contemporary design and better user
+            experience.
           </p>
-        </section>
-        <section class="project-preview" id="BlizzardsClimb">
-          <img
-            src=".\images\BlizzardJump.png"
-            alt="A pixelated image of Blizzard T. Husky from the game Blizzard's Climb"
-            style="
-              position: absolute;
-              height: auto;
-              width: auto;
-              max-width: 12.5rem;
-              max-height: 12.5rem;
-            "
-          />
-          <h2>Blizzard's Climb, HGD</h2>
-          <p>
-            In Spring 2024 I joined the Husky Game Development enterprise where I worked on a game called Blizard's Climb. I was tasked with designing enemy movement and also working on level collision and design. The game was made in Unity and C#.
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >HTML</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >CSS</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Tailwind CSS</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Firebase</span
+            >
+          </div>
+        </div>
+
+        <!-- Blizzard's Climb -->
+        <div
+          id="BlizzardsClimb"
+          class="bg-dark-900/50 backdrop-blur-sm rounded-xl p-6 border border-dark-100/10 shadow-xl"
+        >
+          <div class="flex items-center justify-center mb-6 h-48">
+            <img
+              src="./images/BlizzardJump.png"
+              alt="Blizzard T. Husky from the game Blizzard's Climb"
+              class="max-w-full max-h-full object-contain rounded-lg"
+            />
+          </div>
+          <h2 class="text-2xl font-semibold text-white mb-3">
+            Blizzard's Climb - HGD
+          </h2>
+          <p class="text-dark-50 leading-relaxed mb-4">
+            As part of the Husky Game Development enterprise, I contributed to
+            "Blizzard's Climb" by designing enemy movement patterns and
+            implementing level collision systems. This project enhanced my
+            skills in game physics and level design.
           </p>
-          
-        </section>
-        <section class="project-preview" id="Gentex">
-          <img
-            src="./images/gentex-logo.svg"
-            alt="Gentex Corporation Logo"
-            style="
-              position: absolute;
-              height: auto;
-              width: auto;
-              max-width: 12.5rem;
-              max-height: 12.5rem;
-            "
-          />
-          <h2>Internship With Gentex</h2>
-          <p>
-            I worked with Gentex as a full stack intern from May 2024 - Present. During this time I worked with Typescript, MUI, GraphQL, Rest APIs, and Redux.
-            I worked a lot with changing UI elements and also creating a better UX for the user. I utilized GraphQL calls to grab data for the web app.
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Unity</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >C#</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Game Physics</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Level Design</span
+            >
+          </div>
+        </div>
+
+        <!-- Collegiate Strength -->
+        <div
+          id="CollegiateStrength"
+          class="bg-dark-900/50 backdrop-blur-sm rounded-xl p-6 border border-dark-100/10 shadow-xl"
+        >
+          <div class="flex items-center justify-center mb-6 h-48">
+            <img
+              src="./images/Logo.svg"
+              alt="Collegiate Strength logo"
+              class="max-w-32 max-h-32 object-contain"
+            />
+          </div>
+          <h2 class="text-2xl font-semibold text-white mb-3">
+            Collegiate Strength
+          </h2>
+          <p class="text-dark-50 leading-relaxed mb-4">
+            A comprehensive powerlifting leaderboard web application designed
+            specifically for collegiate powerlifters. Built as a full-stack
+            application using modern web technologies with real-time data
+            synchronization and user authentication.
           </p>
-        </section>
-      </article>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Svelte</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Vercel</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Firestore</span
+            >
+            <span
+              class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+              >Full-stack</span
+            >
+          </div>
+        </div>
+
+        <!-- Gentex Internship -->
+        <div
+          id="Gentex"
+          class="bg-dark-900/50 backdrop-blur-sm rounded-xl p-6 border border-dark-100/10 shadow-xl md:col-span-2"
+        >
+          <div class="grid md:grid-cols-3 gap-6 items-center">
+            <div class="flex items-center justify-center">
+              <img
+                src="./images/gentex-logo.svg"
+                alt="Gentex Corporation Logo"
+                class="max-w-32 max-h-32 object-contain"
+              />
+            </div>
+            <div class="md:col-span-2">
+              <h2 class="text-2xl font-semibold text-white mb-3">
+                Gentex Corporation - Full-Stack Internship
+              </h2>
+              <p class="text-dark-50 leading-relaxed mb-4">
+                During my internship at Gentex Corporation (May 2024 - Present),
+                I worked as a full-stack developer on enterprise web
+                applications. My responsibilities included optimizing
+                application performance, implementing new UI components with
+                Material UI, and developing efficient data management solutions
+                using GraphQL and REST APIs. I collaborated with
+                cross-functional teams to enhance user experience and streamline
+                data processing workflows.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >GraphQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >Material UI</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >REST APIs</span
+                >
+                <span
+                  class="px-3 py-1 bg-primary-500/20 text-primary-500 rounded-full text-xs font-medium"
+                  >Redux</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Home -->
+      <div class="text-center mt-12">
+        <a
+          href="./index.html"
+          class="inline-flex items-center px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200"
+        >
+          <svg
+            class="mr-2 w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            ></path>
+          </svg>
+          Back to Home
+        </a>
+      </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-dark-100/10 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-dark-100">
+          © 2024 Benjamin Papp. Built with HTML, CSS, and Tailwind CSS.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+    </script>
   </body>
 </html>
