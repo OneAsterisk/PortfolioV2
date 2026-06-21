@@ -1,6 +1,4 @@
 *.env
-public/firebase-debug.log
-.firebase/hosting.cHVibGlj.cache
 
 # Vercel
 .vercel

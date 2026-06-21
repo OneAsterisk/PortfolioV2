@@ -31,8 +31,7 @@ A modern, responsive portfolio website showcasing my skills as a full-stack deve
 
 ### Deployment
 
-- **Firebase Hosting** - Fast, secure hosting
-- **Google Cloud** - Reliable infrastructure
+- **Vercel** - Fast, secure global hosting with Git-based continuous deployment
 
 ## 📱 Features
 
