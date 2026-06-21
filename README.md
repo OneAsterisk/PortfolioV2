@@ -31,8 +31,7 @@ A modern, responsive portfolio website showcasing my skills as a full-stack deve
 
 ### Deployment
 
-- **Firebase Hosting** - Fast, secure hosting
-- **Google Cloud** - Reliable infrastructure
+- **Vercel** - Fast, secure global hosting with Git-based continuous deployment
 
 ## 📱 Features
 
@@ -105,6 +104,15 @@ public/
 ├── files/             # Resume PDF
 └── styles.css.backup  # Original CSS (backup)
 ```
+
+### Deployment
+
+The site is hosted on [Vercel](https://vercel.com) with Git-based continuous deployment — no manual deploy commands needed:
+
+- **Open a pull request** → Vercel builds a unique **preview deployment** so changes can be reviewed on a live URL before merging.
+- **Merge to `main`** → Vercel automatically deploys to production at [benpapp.com](https://benpapp.com).
+
+There is no build step; Vercel serves the static files directly from the `public/` directory (configured in `vercel.json`).
 
 ## 📈 Performance Improvements
 
