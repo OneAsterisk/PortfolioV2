@@ -105,6 +105,15 @@ public/
 └── styles.css.backup  # Original CSS (backup)
 ```
 
+### Deployment
+
+The site is hosted on [Vercel](https://vercel.com) with Git-based continuous deployment — no manual deploy commands needed:
+
+- **Open a pull request** → Vercel builds a unique **preview deployment** so changes can be reviewed on a live URL before merging.
+- **Merge to `main`** → Vercel automatically deploys to production at [benpapp.com](https://benpapp.com).
+
+There is no build step; Vercel serves the static files directly from the `public/` directory (configured in `vercel.json`).
+
 ## 📈 Performance Improvements
 
 - **Faster loading** with optimized images
